@@ -7,7 +7,7 @@ $(function(){
   // config some html settings 
     $('#amount').attr('pattern','\\d+(\\.\\d*)?');
     $('#amount').attr('step','0.25');
-  
+
   // load data into UI (autodates on change)
     var fnUpdateBalanceText = function(snapshot){
         $('#balance_text').text( '$'+(snapshot.val()||0).toFixed(2) );
@@ -88,7 +88,7 @@ $(function(){
   $('#account_toggle a').on('click', function(e){
     unwatchBalance(); // unwatch old db balance for updates
     if (this.text.trim() == 'Jax') {
-        $('#balance_text').css('color', 'darkgreen');
+        $('#balance_text').css('color', 'steelblue');
         fireCurrent = fireRoot.child('accounts/jax');
     }
     if (this.text.trim() == 'Remi') {
