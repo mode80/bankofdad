@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            home
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- Enable all requests, inline styles, and eval() -->
+        <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *">
+        <link href="../css/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="../css/theme/flat-ui/flat-ui.css" rel="stylesheet" />
+        <link href="../libs/jquerymobile/1.4.5/jquery.mobile.structure-1.4.5.css" rel="stylesheet"
+        />
+        <link type="text/css" rel="stylesheet" href="../css/mycss.css" />
+        <script type="text/javascript" src="../libs/underscore/underscore.js">
+        </script>
+        <script type="text/javascript" src="../libs/store/json2.js">
+        </script>
+        <script type="text/javascript" src="../libs/jquery/jquery-2.1.1.js">
+        </script>
+        <script type="text/javascript">
+                    $(document).bind("mobileinit", function()
+            {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1)
+                {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                }
+                else if (navigator.userAgent.toLowerCase().indexOf("msie") != -1)
+                {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                }
+                else if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g))
+                {
+                    $.mobile.hashListeningEnabled = false;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="../libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.js">
+        </script>
+        <script type="text/javascript" src="../libs/apperyio/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="../libs/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="../libs/ms_sdk_bundle/q/q.js">
+        </script>
+        <script type="text/javascript" src="../libs/ms_sdk_bundle/EventEmitter.js/EventEmitter.js">
+        </script>
+        <script type="text/javascript" src="../libs/ms_sdk_bundle/tv4/tv4.js">
+        </script>
+        <script type="text/javascript" src="../libs/ms_sdk_bundle/localforage/dist/localforage.js">
+        </script>
+        <script type="text/javascript" src="../libs/ms_sdk_bundle/crypto-js-md5/crypto-js-md5.js">
+        </script>
+        <script type="text/javascript" src="../libs/ms_sdk_bundle/moment/moment.js">
+        </script>
+        <script type="text/javascript" src="../libs/ms_sdk_bundle/underscore-query/underscore-query.min.js">
+        </script>
+        <script type="text/javascript" src="../libs/ms_sdk_bundle/client-sdk.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/appery.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/component-manager.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/mapping-impl.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/entity-api.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/login.js">
+        </script>
+        <script type="text/javascript" src="../libs/base/storage-api.js">
+        </script>
+        <script type="text/javascript" src="../libs/get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="../libs/cordova.js">
+        </script>
+        <script type="text/javascript" src="https://cdn.firebase.com/js/client/2.3.2/firebase.js">
+        </script>
+        <link href="../libs/apperyio/mobilebase.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../js/services/model.js">
+        </script>
+        <script type="text/javascript" src="../js/myjavascript.js">
+        </script>
+        <script type="text/javascript" src="../js/services/service.js">
+        </script>
+        <link href="home.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="home.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="home" id="home" class="type-interior"
+        data-theme="a">
+            <!-- mobileheader -->
+            <div data-role="header" data-position="fixed" data-add-back-btn="false" data-back-btn-text="Back"
+            data-theme="a" name="mobileheader" id="home_mobileheader" class="home_mobileheader">
+                <h1 dsid="mobileheader">
+                    Bank of Dad
+                </h1>
+                <!-- screen_nav -->
+                <div data-role="navbar" id="home_screen_nav" name="screen_nav" dsid="screen_nav"
+                class="home_screen_nav" data-theme="a" style="position: relative;">
+                    <ul>
+                        <!-- new_nav -->
+                        <li>
+                            <a data-theme="a" class="ui-btn-active ui-state-persist" id="home_new_nav" dsid="new_nav"
+                            name="new_nav">
+                            Enter
+                            </a>
+                        </li>
+                        <!-- ledger_nav -->
+                        <li>
+                            <a data-theme="a" id="home_ledger_nav" dsid="ledger_nav" name="ledger_nav">
+                            Ledger
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- balance -->
+                <div data-role="appery_html" name="balance" dsid="balance" id="home_balance" class="htmlbox  home_balance">
+                    <p style="text-align: center;">
+                        <strong>
+                            <span class="balance_text" style="font-family: 'ArialBlack', 'arial black', arial; font-size: 69px; color: steelblue;">
+                                $0.00
+                            </span>
+                        </strong>
+                    </p>
+                </div>
+            </div>
+            <!-- mobilecontainer -->
+            <div data-role="content" id="home_mobilecontainer" name="mobilecontainer" class="home_mobilecontainer ui-content"
+            dsid="mobilecontainer" data-theme="a">
+                <!-- for -->
+                <div data-role="fieldcontain" class="home_for ">
+                    <input type="text" name="for" dsid="for" value="" placeholder="Describe the transaction"
+                    id="home_for" tabindex="3" multiple data-theme="a" class="home_for" />
+                </div>
+                <!-- amount -->
+                <div data-role="fieldcontain" class="home_amount ">
+                    <input type="number" name="amount" dsid="amount" value="" placeholder="Enter the amount"
+                    id="home_amount" tabindex="4" multiple data-theme="a" class="home_amount" />
+                </div>
+                <!-- choose_action -->
+                <div data-role="fieldcontain" class="home_choose_action ">
+                    <select name="choose_action" id="home_choose_action" dsid="choose_action" data-theme="a"
+                    data-role="appery_selectmenu" data-inline="false" data-mini="false" data-icon="arrow-d"
+                    data-iconpos="right" data-native-menu="false" tabindex="2" appery-class="home_choose_action">
+                        <option id="home_choose_action-0" value="choose" reRender="choose_action" dsid="choose_action-0"
+                        selected="selected">
+                            Or choose one
+                        </option>
+                        <option id="home_choose_action-1" value="ignore" reRender="choose_action" dsid="choose_action-1">
+                            Ignore
+                        </option>
+                        <option id="home_choose_action-2" value="antagonize" reRender="choose_action" dsid="choose_action-2">
+                            Antagonize
+                        </option>
+                        <option id="home_choose_action-3" value="shout" reRender="choose_action" dsid="choose_action-3">
+                            Shout
+                        </option>
+                        <option id="home_choose_action-4" value="hurt" reRender="choose_action" dsid="choose_action-4">
+                            Hurt
+                        </option>
+                        <option id="home_choose_action-5" value="allowance" reRender="choose_action" dsid="choose_action-5">
+                            Allowance
+                        </option>
+                    </select>
+                </div>
+                <!-- enter --><!--
+                --><a data-role="button" name="enter" dsid="enter" class="home_enter" id="home_enter"
+                data-corners="true" data-icon="none" data-iconpos='nowhere' x-apple-data-detectors="false"
+                data-mini="false" data-theme="a" tabindex="5">
+                Save
+                </a>
+            </div>
+            <!-- mobilefooter -->
+            <div data-role="footer" data-position="fixed" class="home_mobilefooter" name="mobilefooter"
+            dsid="mobilefooter" id="home_mobilefooter" data-theme="a">
+                <!-- account_nav -->
+                <div data-role="navbar" id="home_account_nav" name="account_nav" dsid="account_nav"
+                class="home_account_nav" data-theme="a" style="position: relative;">
+                    <ul>
+                        <!-- jax_nav -->
+                        <li>
+                            <a data-theme="a" data-icon="star" id="home_jax_nav" dsid="jax_nav" name="jax_nav">
+                            Jax
+                            </a>
+                        </li>
+                        <!-- remi_nav -->
+                        <li>
+                            <a data-theme="a" data-icon="heart" id="home_remi_nav" dsid="remi_nav" name="remi_nav">
+                            Remi
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div data-role="page" style="min-height:480px;" dsid="ledger" id="ledger" class="type-interior"
+        data-theme="a">
+            <!-- mobileheader -->
+            <div data-role="header" data-position="fixed" data-add-back-btn="false" data-back-btn-text="Back"
+            data-theme="a" name="mobileheader" id="ledger_mobileheader" class="ledger_mobileheader">
+                <h1 dsid="mobileheader">
+                    Bank of Dad
+                </h1>
+                <!-- screen_nav -->
+                <div data-role="navbar" id="ledger_screen_nav" name="screen_nav" dsid="screen_nav"
+                class="ledger_screen_nav" data-theme="a" style="position: relative;">
+                    <ul>
+                        <!-- new_nav -->
+                        <li>
+                            <a data-theme="a" id="ledger_new_nav" dsid="new_nav" name="new_nav">
+                            Enter
+                            </a>
+                        </li>
+                        <!-- ledger_nav -->
+                        <li>
+                            <a data-theme="a" class="ui-btn-active ui-state-persist" id="ledger_ledger_nav"
+                            dsid="ledger_nav" name="ledger_nav">
+                            Ledger
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- balance -->
+                <div data-role="appery_html" name="balance" dsid="balance" id="ledger_balance" class="htmlbox  ledger_balance">
+                    <p style="text-align: center;">
+                        <strong>
+                            <span class="balance_text" style="font-family: 'ArialBlack', 'arial black', arial; font-size: 69px; color: steelblue;">
+                                $0.00
+                            </span>
+                        </strong>
+                    </p>
+                </div>
+            </div>
+            <!-- mobilecontainer -->
+            <div data-role="content" id="ledger_mobilecontainer" name="mobilecontainer" class="ledger_mobilecontainer ui-content"
+            dsid="mobilecontainer" data-theme="a">
+                <!-- tx_list -->
+                <ul data-role="listview" id="ledger_tx_list" class="ledger_tx_list" name="tx_list"
+                dsid="tx_list" data-filter="true" data-filter-theme="c" data-filter-placeholder=" "
+                data-theme="c" data-autodividers="true" data-divider-theme="b" data-count-theme="c"
+                style="" data-split-icon="minus">
+                    <!-- mobilelistitem_18 -->
+                    <li id="ledger_mobilelistitem_18" name="mobilelistitem_18" dsid="mobilelistitem_18"
+                    data-icon="minus" class="ledger_mobilelistitem_18  ui-btn-icon-right ui-icon-minus">
+                        <div class="ui-li-static-container">
+                            <h3>
+                                Item 1
+                            </h3>
+                            </a>
+                    </li>
+                </ul>
+                </div>
+                <!-- mobilefooter -->
+                <div data-role="footer" data-position="fixed" class="ledger_mobilefooter" name="mobilefooter"
+                dsid="mobilefooter" id="ledger_mobilefooter" data-theme="a">
+                    <!-- account_nav -->
+                    <div data-role="navbar" id="ledger_account_nav" name="account_nav" dsid="account_nav"
+                    class="ledger_account_nav" data-theme="a" style="position: relative;">
+                        <ul>
+                            <!-- jax_nav -->
+                            <li>
+                                <a data-theme="a" data-icon="star" id="ledger_jax_nav" dsid="jax_nav" name="jax_nav">
+                                Jax
+                                </a>
+                            </li>
+                            <!-- remi_nav -->
+                            <li>
+                                <a data-theme="a" data-icon="heart" id="ledger_remi_nav" dsid="remi_nav" name="remi_nav">
+                                Remi
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </body>
+
+</html>

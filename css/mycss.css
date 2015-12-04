@@ -1,0 +1,23 @@
+.htmlbox {
+	background:white;    
+}
+
+
+[dsid=jax_nav]:after {
+    content: '';
+	background: url('https://pbs.twimg.com/profile_images/1099266254/931753244_bJwqU-L.jpg');
+	background-size: 20px 20px !important;
+	border-radius: 50% !important;    
+}
+
+[dsid=remi_nav]:after {
+    content: '';
+	background: url('https://pbs.twimg.com/profile_images/1590139206/Screen_Shot_2011-10-15_at_4.40.56_PM.png');
+	background-size: 20px 20px !important;
+	border-radius: 50% !important;    
+}
+
+@font-face {
+  font-family: 'ArialBlack';
+  src:  url('../font/arial-black.woff') format('woff');
+}
